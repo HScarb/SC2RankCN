@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="sc2rankcn" />
+        <module name="SC2RankCN" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="sc2rankcn" target="1.8" />
+      <module name="SC2RankCN" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>

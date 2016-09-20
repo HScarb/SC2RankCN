@@ -1,83 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Licensed to the Apache Software Foundation (ASF) under one
-  or more contributor license agreements.  See the NOTICE file
-  distributed with this work for additional information
-  regarding copyright ownership.  The ASF licenses this file
-  to you under the Apache License, Version 2.0 (the
-  "License"); you may not use this file except in compliance
-  with the License.  You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing,
-  software distributed under the License is distributed on an
-  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-  KIND, either express or implied.  See the License for the
-  specific language governing permissions and limitations
-  under the License.
--->
-<!-- $Id: pom.xml 642118 2008-03-28 08:04:16Z reinhard $ -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <groupId>com.scarb.sc2rank</groupId>
+  <artifactId>sc2rank</artifactId>
   <packaging>war</packaging>
-
-  <name>sc2rankcn</name>
-  <groupId>com.scarb.sc2rankcn</groupId>
-  <artifactId>sc2rankcn</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <name>ssm Maven Webapp</name>
+  <url>http://maven.apache.org</url>
 
   <properties>
+    <!-- spring版本号 -->
     <spring.version>4.3.2.RELEASE</spring.version>
-    <mybatis.version>3.4.1</mybatis.version>
-    <mybatis-spring.version>1.3.0</mybatis-spring.version>
-    <mysql.version>5.1.39</mysql.version>
-    <!--log4j日志文件管理包版本-->
+    <!-- log4j日志文件管理包版本 -->
     <slf4j.version>1.7.21</slf4j.version>
     <log4j.version>1.2.17</log4j.version>
-    <!--junit单元测试管理包版本-->
+    <!-- junit版本号 -->
     <junit.version>4.12</junit.version>
+    <!-- mybatis版本号 -->
+    <mybatis.version>3.4.1</mybatis.version>
   </properties>
 
-
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <!-- spring核心包 -->
+    <!-- 添加Spring依赖 -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>${spring.version}</version>
     </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-web</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-oxm</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-tx</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
-      <version>${spring.version}</version>
-    </dependency>
-
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
@@ -85,57 +34,48 @@
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-aop</artifactId>
+      <artifactId>spring-context</artifactId>
       <version>${spring.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context-support</artifactId>
       <version>${spring.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
+      <artifactId>spring-aop</artifactId>
       <version>${spring.version}</version>
     </dependency>
-    <!-- mybatis核心包 -->
     <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis</artifactId>
-      <version>${mybatis.version}</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aspects</artifactId>
+      <version>${spring.version}</version>
     </dependency>
-    <!-- mybatis/spring包 -->
     <dependency>
-      <groupId>org.mybatis</groupId>
-      <artifactId>mybatis-spring</artifactId>
-      <version>${mybatis-spring.version}</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>${spring.version}</version>
     </dependency>
-    <!-- 导入java ee jar 包 -->
     <dependency>
-      <groupId>javax</groupId>
-      <artifactId>javaee-api</artifactId>
-      <version>7.0</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>${spring.version}</version>
     </dependency>
-    <!-- 导入Mysql数据库链接jar包 -->
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>${mysql.version}</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
     </dependency>
-    <!-- 导入dbcp的jar包，用来在applicationContext.xml中配置数据库 -->
+
+    <!--单元测试依赖 -->
     <dependency>
-      <groupId>commons-dbcp</groupId>
-      <artifactId>commons-dbcp</artifactId>
-      <version>1.2.2</version>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
     </dependency>
-    <!-- JSTL标签类 -->
-    <dependency>
-      <groupId>jstl</groupId>
-      <artifactId>jstl</artifactId>
-      <version>1.2</version>
-    </dependency>
+
     <!-- 日志文件管理包 -->
     <!-- log start -->
     <dependency>
@@ -143,69 +83,121 @@
       <artifactId>log4j</artifactId>
       <version>${log4j.version}</version>
     </dependency>
-
-
-    <!-- 格式化对象，方便输出日志 -->
-    <dependency>
-      <groupId>com.alibaba</groupId>
-      <artifactId>fastjson</artifactId>
-      <version>1.1.41</version>
-    </dependency>
-
-
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-log4j12</artifactId>
       <version>${slf4j.version}</version>
     </dependency>
     <!-- log end -->
-    <!-- 映入JSON -->
+
+    <!--spring单元测试依赖 -->
     <dependency>
-      <groupId>org.codehaus.jackson</groupId>
-      <artifactId>jackson-mapper-asl</artifactId>
-      <version>1.9.13</version>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>${spring.version}</version>
+      <scope>test</scope>
     </dependency>
-    <!-- 上传组件包 -->
+
+    <!--mybatis依赖 -->
     <dependency>
-      <groupId>commons-fileupload</groupId>
-      <artifactId>commons-fileupload</artifactId>
-      <version>1.3.1</version>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+
+    <!-- mybatis/spring包 -->
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-spring</artifactId>
+      <version>1.3.0</version>
+    </dependency>
+
+    <!-- mysql驱动包 -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>5.1.39</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>7.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-web-api</artifactId>
+      <version>7.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-servlet-api</artifactId>
+      <version>7.0.56</version>
+      <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
+      <groupId>org.apache.tomcat</groupId>
+      <artifactId>tomcat-jsp-api</artifactId>
+      <version>7.0.57</version>
+      <scope>provided</scope>
+    </dependency>
+
+    <!--分页插件-->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>4.1.6</version>
+    </dependency>
+    <!--json lib-->
+    <dependency>
+      <groupId>net.sf.json-lib</groupId>
+      <artifactId>json-lib</artifactId>
       <version>2.4</version>
     </dependency>
     <dependency>
-      <groupId>commons-codec</groupId>
-      <artifactId>commons-codec</artifactId>
-      <version>1.9</version>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-commons</artifactId>
+      <version>1.12.2.RELEASE</version>
     </dependency>
-    <!--json处理-->
-      <dependency>
-          <groupId>net.sf.json-lib</groupId>
-          <artifactId>json-lib</artifactId>
-          <version>2.4</version>
-      </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>1.10.2.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>1.2.17</version>
+    </dependency>
 
+    <!--validator-->
+    <dependency>
+      <groupId>javax.validation</groupId>
+      <artifactId>validation-api</artifactId>
+      <version>1.1.0.Final</version>
+    </dependency>
 
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-validator</artifactId>
+      <version>5.0.1.Final</version>
+    </dependency>
   </dependencies>
 
-
   <build>
-    <finalName>emon-ssm</finalName>
+    <finalName>SC2RankCN</finalName>
     <plugins>
-      <!--mybatis 逆向工程插件-->
       <plugin>
         <groupId>org.mybatis.generator</groupId>
         <artifactId>mybatis-generator-maven-plugin</artifactId>
-        <version>1.3.2</version>
+        <version>1.3.5</version>
         <configuration>
           <verbose>true</verbose>
           <overwrite>true</overwrite>
@@ -214,9 +206,10 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <source>1.6</source>
+          <target>1.6</target>
         </configuration>
       </plugin>
     </plugins>
