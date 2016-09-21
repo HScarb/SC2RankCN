@@ -19,10 +19,13 @@
     <result column="joinTime" jdbcType="VARCHAR" property="jointime" />
     <result column="league" jdbcType="VARCHAR" property="league" />
     <result column="ladderid" jdbcType="INTEGER" property="ladderid" />
+    <result column="updateTime" jdbcType="INTEGER" property="updatetime" />
+    <result column="winRate" jdbcType="INTEGER" property="winrate" />
+
   </resultMap>
   <sql id="Base_Column_List">
     id, name, clanName, clanTag, profilePath, favoriteRace, points, wins, losses, joinTime, 
-    league, ladderid
+    league, ladderid, updateTime, winRate
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 

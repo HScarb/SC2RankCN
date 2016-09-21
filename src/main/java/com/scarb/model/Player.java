@@ -25,6 +25,10 @@ public class Player {
 
     private Integer ladderid;
 
+    private Integer winrate;
+
+    private Integer updatetime;
+
     public Integer getId() {
         return id;
     }
@@ -119,5 +123,21 @@ public class Player {
 
     public void setLadderid(Integer ladderid) {
         this.ladderid = ladderid;
+    }
+
+    public Integer getWinrate() {
+        return winrate;
+    }
+
+    public void setWinrate(Integer winrate) {
+        this.winrate = winrate;
+    }
+
+    public Integer getUpdatetime() {
+        return updatetime;
+    }
+
+    public void setUpdateTime(Integer updatetime) {
+        this.updatetime = updatetime;
     }
 }

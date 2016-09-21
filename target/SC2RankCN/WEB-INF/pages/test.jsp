@@ -87,13 +87,14 @@
         <thead>
         <tr>
             <th>玩家ID</th>
-            <th>战队</th>
-            <th>角色名</th>
-            <th>种族</th>
             <th>组别</th>
+            <th>种族</th>
+            <th>角色名</th>
             <th>分数</th>
             <th>胜利</th>
             <th>失败</th>
+            <th>胜率</th>
+            <th>时间</th>
         </tr>
         </thead>
         <tbody id="tableBody">
@@ -177,18 +178,28 @@
                         }
                         $('#bottomTab').bootstrapPaginator("setOptions",newoptions); //重新设置总页面数目
                         var dataList = data.dataList;
+
                         $("#tableBody").empty();//清空表格内容
                         if (dataList.length > 0 ) {
                             $(dataList).each(function(){//重新生成
+                                var date = new Date(Number(this.updatetime) * 1000);
                                 $("#tableBody").append('<tr>');
                                 $("#tableBody").append('<td>' + this.id + '</td>');
-                                $("#tableBody").append('<td>' + this.clantag + '</td>');
-                                $("#tableBody").append('<td>' + this.name + '</td>');
-                                $("#tableBody").append('<td>' + this.favoriterace + '</td>');
                                 $("#tableBody").append('<td>' + this.league + '</td>');
+                                $("#tableBody").append('<td>' + this.favoriterace + '</td>');
+//                                $("#tableBody").append('<td>' + this.name + '</td>');
+                                if (this.clantag != '')
+                                    $("#tableBody").append('<td> <a href="http://www.battlenet.com.cn/sc2/zh' + this.profilepath + '" target="_blank">' +
+                                            '[' + this.clantag + ']' + this.name + '</a> </td>');
+                                else
+                                    $("#tableBody").append('<td> <a href="http://www.battlenet.com.cn/sc2/zh' + this.profilepath + '" target="_blank">' +
+                                            this.name + '</a> </td>');
+
                                 $("#tableBody").append('<td>' + this.points + '</td>');
                                 $("#tableBody").append('<td>' + this.wins + '</td>');
                                 $("#tableBody").append('<td>' + this.losses + '</td>');
+                                $("#tableBody").append('<td>' + this.winrate + '</td>');
+                                $("#tableBody").append('<td>' + date.toLocaleDateString() + '</td>');
                                 $("#tableBody").append('</tr>');
                             });
                         } else {
