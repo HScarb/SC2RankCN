@@ -1,0 +1,21 @@
+#queryDiv {
+    margin-right: auto;
+    margin-left: auto;
+    width:300px;
+}
+#textInput {
+    margin-top: 10px;
+}
+#league-nav{
+    margin-right: auto;
+    margin-left: auto;
+    width:800px;
+}
+#tableResult {
+    margin-right: auto;
+    margin-left: auto;
+    width:800px;
+}
+td {
+    width:150px
+}

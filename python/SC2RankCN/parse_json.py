@@ -61,6 +61,9 @@ def parseLadderInfo(ladderID):
             playerData = data['ladderMembers'][0]['character']       # 玩家character信息
     except requests.HTTPError as e:
         print(e)
+    except:
+        print('Ladder parse Error cought when parsing ladder #', ladderID)
+
 
     if playerData == None:
         return None
@@ -112,7 +115,9 @@ def parseLadderInfo(ladderID):
                             break
         except requests.HTTPError as e:
             print(e)
-    print(ladder)
+        except:
+            print('Player ladder info parse error cought when parsing player #', playerData['profilePath'])
+    # print(ladder)
     return ladder
 
 def parsePlayersInfo(ladderTuple):
@@ -122,27 +127,35 @@ def parsePlayersInfo(ladderTuple):
     """
     playersInfo = []
     url = 'https://api.battlenet.com.cn/sc2/ladder/' + str(ladderTuple[0]) + '?locale=zh_CN&apikey=smrfmd762jv8z9uqem7uufeadu8z8493'
-    r = requests.get(url)
-    data = json.loads(r.text)
-    for p in data['ladderMembers']:
-        player = {}
-        player['id'] = p['character']['id']
-        player['name'] = p['character']['displayName']
-        player['clanName'] = p['character']['clanName']
-        player['clanTag'] = p['character']['clanTag']
-        player['profilePath'] = p['character']['profilePath']
-        if 'favoriteRaceP1' in p:
-            player['favoriteRace'] = p['favoriteRaceP1']
-        else:
-            player['favoriteRace'] = ''
-        player['points'] = p['points']
-        player['wins'] = p['wins']
-        player['losses'] = p['losses']
-        player['joinTime'] = p['joinTimestamp']
-        player['league'] = ladderTuple[2]
-        player['ladderid'] = ladderTuple[0]
-        player['updateTime'] = time.time()
-        player['winRate'] = p['wins'] / (p['wins'] + p['losses']) * 100
-        playersInfo.append(player)
+    try:
+        r = requests.get(url)
+        data = json.loads(r.text)
+    except:
+        print('Error when request url=', url)
+        return None
+    try:
+        for p in data['ladderMembers']:
+            player = {}
+            player['id'] = p['character']['id']
+            player['name'] = p['character']['displayName']
+            player['clanName'] = p['character']['clanName']
+            player['clanTag'] = p['character']['clanTag']
+            player['profilePath'] = p['character']['profilePath']
+            if 'favoriteRaceP1' in p:
+                player['favoriteRace'] = p['favoriteRaceP1']
+            else:
+                player['favoriteRace'] = ''
+            player['points'] = p['points']
+            player['wins'] = p['wins']
+            player['losses'] = p['losses']
+            player['joinTime'] = p['joinTimestamp']
+            player['league'] = ladderTuple[2]
+            player['ladderid'] = ladderTuple[0]
+            player['updateTime'] = time.time()
+            player['winRate'] = p['wins'] / (p['wins'] + p['losses']) * 100
+            playersInfo.append(player)
+    except:
+        print('Error when appending player data.')
+
     return playersInfo
 

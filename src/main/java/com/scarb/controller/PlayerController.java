@@ -26,16 +26,55 @@ public class PlayerController extends BaseController{
     private PlayerService playerService;
 
     @RequestMapping("/")
-    public ModelAndView getIndex(){
-        ModelAndView mav = new ModelAndView("index");
-        Player player = playerService.selectPlayerById(1);
-        mav.addObject("player", player);
-        return mav;
+    public String getIndex(){
+//        ModelAndView mav = new ModelAndView("index");
+//        Player player = playerService.selectPlayerById(1);
+//        mav.addObject("player", player);
+//        return mav;
+        return "index";
     }
 
     @RequestMapping("/test")
     public String Test(){
         return "test";
+    }
+
+    @RequestMapping("/about")
+    public String about(){
+        return "about";
+    }
+
+    @RequestMapping("/grandmaster")
+    public String grandmaster(){
+        return "grandmaster";
+    }
+    @RequestMapping("/master")
+    public String master(){
+        return "master";
+    }
+    @RequestMapping("/diamond")
+    public String diamond(){
+        return "diamond";
+    }
+    @RequestMapping("platinum")
+    public String platinum(){
+        return "platinum";
+    }
+    @RequestMapping("gold")
+    public String gold(){
+        return "gold";
+    }
+    @RequestMapping("silver")
+    public String silver(){
+        return "silver";
+    }
+    @RequestMapping("bronze")
+    public String bronze(){
+        return "bronze";
+    }
+    @RequestMapping("noleague")
+    public String noleague(){
+        return "noleague";
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.POST,produces = "text/html;charset=UTF-8")      // springmvc 发送ajax中文乱码的几种解决办法 http://wxynxyo.iteye.com/blog/2000327
@@ -44,6 +83,18 @@ public class PlayerController extends BaseController{
         logger.info("分页查询玩家信息列表请求入参：pageNumber{}, pageSize{}", pageNumber, pageSize);
         try {
             PagedResult<Player> pageResult = playerService.queryNameByPage(name, pageNumber, pageSize);
+            return responseSuccess(pageResult);
+        } catch (Exception e) {
+            return responseFail(e.getMessage());
+        }
+    }
+
+    @RequestMapping(value = "/listleague", method = RequestMethod.POST,produces = "text/html;charset=UTF-8")      // springmvc 发送ajax中文乱码的几种解决办法 http://wxynxyo.iteye.com/blog/2000327
+    @ResponseBody
+    public String listByLeague(Integer pageNumber, Integer pageSize, String league){
+        logger.info("分页查询玩家信息列表请求入参：pageNumber{}, pageSize{}", pageNumber, pageSize);
+        try {
+            PagedResult<Player> pageResult = playerService.queryLeagueByPage(league, pageNumber, pageSize);
             return responseSuccess(pageResult);
         } catch (Exception e) {
             return responseFail(e.getMessage());

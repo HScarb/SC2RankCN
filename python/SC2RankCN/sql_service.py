@@ -33,8 +33,11 @@ def db_addPlayer(player):
     conn.commit()
 
 def db_addPlayers(players):
-    for p in players:
-        db_addPlayer(p)
+    try:
+        for p in players:
+            db_addPlayer(p)
+    except:
+        print('Error in db_addPlayers')
 
 def db_selectNewestLadder():
     try:
@@ -43,3 +46,31 @@ def db_selectNewestLadder():
         return value
     except mysql.connector.Error as e:
         print(e)
+
+def db_clearTable(tableName):
+    sql = 'TRUNCATE TABLE ' + str(tableName)
+    cursor.execute(sql)
+    conn.commit()
+
+def db_orderPlayerByRank():
+    sql = '''
+        UPDATE player r,(
+            SELECT a.id ,(@row:=@row + 1) AS rowNum
+            FROM player a,(SELECT @row:=0)b
+            ORDER BY
+                CASE
+                  WHEN league = 'GRANDMASTER' THEN 1
+                  WHEN league = 'MASTER' THEN 2
+                  WHEN league = 'DIAMOND' THEN 3
+                  WHEN league = 'PLATINUM' THEN 4
+                  WHEN league = 'GOLD' THEN 5
+                  WHEN league = 'SILVER' THEN 6
+                  WHEN league = 'BRONZE' THEN 7
+                END
+            , points DESC
+        )t
+        SET r.rank = t.rowNum
+        WHERE r.id = t.id
+        '''
+    cursor.execute(sql)
+    conn.commit()

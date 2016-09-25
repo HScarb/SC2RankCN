@@ -3,6 +3,8 @@ package com.scarb.model;
 public class Player {
     private Integer id;
 
+    private Integer rank;
+
     private String name;
 
     private String clanname;
@@ -35,6 +37,14 @@ public class Player {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public Integer getRank() {
+        return rank;
+    }
+
+    public void setRank(Integer rank) {
+        this.rank = rank;
     }
 
     public String getName() {

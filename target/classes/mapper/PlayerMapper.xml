@@ -8,6 +8,7 @@
       This element was generated on Wed Sep 14 05:18:28 CST 2016.
     -->
     <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="rank" jdbcType="INTEGER" property="rank" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="clanName" jdbcType="VARCHAR" property="clanname" />
     <result column="clanTag" jdbcType="VARCHAR" property="clantag" />
@@ -24,7 +25,7 @@
 
   </resultMap>
   <sql id="Base_Column_List">
-    id, name, clanName, clanTag, profilePath, favoriteRace, points, wins, losses, joinTime, 
+    id, rank, name, clanName, clanTag, profilePath, favoriteRace, points, wins, losses, joinTime,
     league, ladderid, updateTime, winRate
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">

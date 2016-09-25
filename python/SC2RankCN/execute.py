@@ -18,19 +18,50 @@ def executeLadders(minId, maxId):
                 print('execute ladder done.')
                 break
 
+def parsePlayersFromLadders(minId):
+    # 从天梯列表中获取玩家数据，存储进玩家表
+    ladders = sql_service.db_selectLadderByQueue('LOTV_SOLO')
+    for ladder in ladders:
+        if ladder[0] >= minId:
+            print('Adding player in ladder # ', ladder[0])
+            playersInfo = parse_json.parsePlayersInfo(ladder)
+            if playersInfo != None:
+                print('PlayersInfo got. Now adding into data base.')
+                sql_service.db_addPlayers(playersInfo)
+            else:
+                print('playersInfo is None')
+                continue
+
+def parsePlayersFromAllLadders():
+    # 从天梯列表中获取玩家数据，存储进玩家表
+    ladders = sql_service.db_selectLadderByQueue('LOTV_SOLO')
+    for ladder in ladders:
+        print('Adding player in ladder # ', ladder[0])
+        playersInfo = parse_json.parsePlayersInfo(ladder)
+        if playersInfo != None:
+            print('PlayersInfo got. Now adding into data base.')
+            sql_service.db_addPlayers(playersInfo)
+        else:
+            print('playersInfo is None')
+            continue
 
 def checkNewLadder(maxLadderId):
     oldLadderId = sql_service.db_selectNewestLadder()[0]
     executeLadders(oldLadderId, maxLadderId)
 
 if __name__ == '__main__':
-    checkNewLadder(34000)
+    # 先收录最新的天梯
+    # checkNewLadder(34000)
 
-    ladders = sql_service.db_selectLadderByQueue('LOTV_SOLO')
-    for ladder in ladders:
-        print('Adding player in ladder # ', ladder[0])
-        playersInfo = parse_json.parsePlayersInfo(ladder)
-        sql_service.db_addPlayers(playersInfo)
+    # 将玩家数据表现清空
+    # print('clearing player table...')
+    # sql_service.db_clearTable('player')
+
+    parsePlayersFromLadders(33787)
+
+    # 将玩家表按组别和分数添加排名序号
+    print('ordering players rank....')
+    sql_service.db_orderPlayerByRank()
 
     sql_service.cursor.close()
     sql_service.conn.close()
