@@ -52,14 +52,15 @@
         </javaClientGenerator>
         <!-- 指定数据库表 -->
         <!--不生产Example文件-->
-        <table schema="general" tableName="ladder" domainObjectName="Ladder"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
-        <table schema="general" tableName="player" domainObjectName="Player"
-               enableCountByExample="false" enableUpdateByExample="false"
-               enableDeleteByExample="false" enableSelectByExample="false"
-               selectByExampleQueryId="false"></table>
+        <!--<table schema="general" tableName="ladder" domainObjectName="Ladder"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"></table>-->
+        <!--<table schema="general" tableName="player" domainObjectName="Player"-->
+               <!--enableCountByExample="false" enableUpdateByExample="false"-->
+               <!--enableDeleteByExample="false" enableSelectByExample="false"-->
+               <!--selectByExampleQueryId="false"></table>-->
+        <table schema="general" tableName="user" domainObjectName="User"/>
 
     </context>
 </generatorConfiguration>

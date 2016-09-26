@@ -23,6 +23,10 @@
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
     </context:component-scan>
 
+    <!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
+    <!--AnnotationMethodHandlerAdapter 的使用已经过时,用 RequestMappingHandlerAdapter 来替换 AnnotationMethodHandlerAdapter。-->
+    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
+
 
     <!-- 会自动注册了validator  ConversionService  -->
     <mvc:annotation-driven validator="validator" conversion-service="conversionService" content-negotiation-manager="contentNegotiationManager">
