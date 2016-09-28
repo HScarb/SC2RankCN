@@ -13,7 +13,8 @@
     <script src="<%=request.getContextPath()%>/static/js/jQuery/jquery-2.1.4.min.js"></script>
     <script src="<%=request.getContextPath()%>/static/js/bootstrap/js/bootstrap.min.js"></script>
     <script src="<%=request.getContextPath()%>/static/js/bootstrap/js/bootstrap-paginator.min.js"></script>
-    <%--<style src="<%=request.getContextPath()%>/static/css/style.css"></style>--%>
+
+<%--<style src="<%=request.getContextPath()%>/static/css/style.css"></style>--%>
 
     <div class="navbar">
         <div class="navbar-inner">

@@ -32,7 +32,7 @@ public class RegisterServiceImpl implements RegisterService{
     @Override
     public int countByExample(UserExample example) {
         try {
-            return userDao.countByExample(example);
+            return (int) userDao.countByExample(example);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -40,7 +40,7 @@ function getRootPath() {
     var webName = pathName == '' ? '' : pathName.substring(0, pathName
         .indexOf('/'));
     return window.location.protocol + '//' + window.location.host + '/'
-        + webName + '/';
+        + webName /*+ '/'*/;
 }
 /*
  * 用户名检测
@@ -52,7 +52,7 @@ function checkUserName(obj) {
         showInfo("username_notice", username_empty);
     }else if (obj.value.length < 3) {
         showInfo("username_notice", username_shorter);
-    } else if(obj.value.length>30){
+    } else if(obj.value.length > 30){
         showInfo("username_notice", username_longer);
     }else {
         // 调用Ajax函数,向服务器端发送查询
@@ -263,7 +263,7 @@ function checkAgreement(obj){
  */
 function change_submit()
 {
-    if(name_flag&&email_flag&&password_flag&&accept_flag){
+    if(name_flag && email_flag && password_flag && accept_flag){
         document.forms['formUser'].elements['Submit1'].disabled = '';
     }
     else
