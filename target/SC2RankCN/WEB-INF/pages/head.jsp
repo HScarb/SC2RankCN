@@ -6,6 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>
+<%
+    String url = request.getRequestURL().toString();
+    url = url.substring(0, url.indexOf('/', url.indexOf("//") + 2));
+    String context = request.getContextPath();
+    url += context;
+    application.setAttribute("ctx", url);
+%>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC2RankCN</title>
@@ -27,12 +36,49 @@
                 <a class="brand" href="#">SC2Rank</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
                     <ul class="nav">
-                        <li id="mainpage" class="active"><a href="<%=request.getContextPath()%>/">首页</a></li>
-                        <li id="blog"><a href="http://scarb.website/">博客</a></li>
-                        <li id="about"><a href="<%=request.getContextPath()%>/about">关于</a></li>
+                        <c:choose>
+                            <c:when test="${currentPage == 'index'}">
+                                <li id="mainpage" class="active"><a href="<%=request.getContextPath()%>/">首页</a></li>
+                                <li id="blog"><a href="http://scarb.website/">博客</a></li>
+                                <li id="about"><a href="<%=request.getContextPath()%>/about">关于</a></li>
+                            </c:when>
+                            <c:when test="${currentPage == 'about'}">
+                                <li id="mainpage"><a href="<%=request.getContextPath()%>/">首页</a></li>
+                                <li id="blog"><a href="http://scarb.website/">博客</a></li>
+                                <li id="about" class="active"><a href="<%=request.getContextPath()%>/about">关于</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li id="mainpage"><a href="<%=request.getContextPath()%>/">首页</a></li>
+                                <li id="blog"><a href="http://scarb.website/">博客</a></li>
+                                <li id="about"><a href="<%=request.getContextPath()%>/about">关于</a></li>
+                            </c:otherwise>
+                        </c:choose>
+
                     </ul>
                     <ul class="nav pull-right">
-                        <li><a href="#"></a></li>
+                        <%--已登录--%>
+                        <shiro:user>
+                            <li id="principal"><a href="#"><shiro:principal/></a></li>
+                            <li id="logout"><a href="logout">登出</a></li>
+                        </shiro:user>
+                        <%--未登录--%>
+                        <shiro:guest>
+                            <c:choose>
+                                <c:when test="${currentPage == 'login'}">
+                                    <li id="login" class="active"><a href="login">登录</a></li>
+                                    <li id="register"><a href="register">注册</a></li>
+                                </c:when>
+                                <c:when test="${currentPage == 'register'}">
+                                    <li id="login"><a href="login">登录</a></li>
+                                    <li id="register" class="active"><a href="register">注册</a></li>
+                                </c:when>
+                                <c:otherwise>
+                                    <li id="login"><a href="login">登录</a></li>
+                                    <li id="register"><a href="register">注册</a></li>
+                                </c:otherwise>
+                            </c:choose>
+                        </shiro:guest>
+
                         <li class="divider-vertical"></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
@@ -41,7 +87,7 @@
                                 <li><a href="#">Another action</a></li>
                                 <li><a href="#">Something else here</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">Action</a></li>
                             </ul>
                         </li>
                     </ul>

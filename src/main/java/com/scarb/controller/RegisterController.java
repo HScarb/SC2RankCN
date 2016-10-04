@@ -4,10 +4,12 @@ import com.scarb.model.User;
 import com.scarb.model.UserExample;
 import com.scarb.model.UserExample.Criteria;
 import com.scarb.service.RegisterService;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.sf.json.JSONObject;
 import org.apache.commons.collections.map.HashedMap;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -30,7 +32,8 @@ public class RegisterController {
     private RegisterService registerService;
 
     @RequestMapping("/register")
-    public String register(){
+    public String register(Model model){
+        model.addAttribute("currentPage", "register");
         return "register";
     }
 

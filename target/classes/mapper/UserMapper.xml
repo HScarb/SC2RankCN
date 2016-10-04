@@ -300,4 +300,10 @@
       USER_GAMENAME = #{userGamename,jdbcType=CHAR}
     where USER_ID = #{userId,jdbcType=INTEGER}
   </update>
+  <select id="findUserByLoginName" resultMap="BaseResultMap" parameterType="string">
+    SELECT
+    <include refid="Base_Column_List"/>
+    FROM user
+    where USER_NAME = #{_parameter, jdbcType=VARCHAR}
+  </select>
 </mapper>

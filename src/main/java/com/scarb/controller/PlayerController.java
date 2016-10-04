@@ -7,6 +7,7 @@ import com.scarb.util.PagedResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,11 +27,12 @@ public class PlayerController extends BaseController{
     private PlayerService playerService;
 
     @RequestMapping("/")
-    public String getIndex(){
+    public String getIndex(Model model){
 //        ModelAndView mav = new ModelAndView("index");
 //        Player player = playerService.selectPlayerById(1);
 //        mav.addObject("player", player);
 //        return mav;
+        model.addAttribute("currentPage", "index");
         return "index";
     }
 
@@ -40,40 +42,49 @@ public class PlayerController extends BaseController{
     }
 
     @RequestMapping("/about")
-    public String about(){
+    public String about(Model model){
+        model.addAttribute("currentPage", "about");
         return "about";
     }
 
     @RequestMapping("/grandmaster")
-    public String grandmaster(){
+    public String grandmaster(Model model){
+        model.addAttribute("currentPage", "index");
         return "grandmaster";
     }
     @RequestMapping("/master")
-    public String master(){
+    public String master(Model model){
+        model.addAttribute("currentPage", "index");
         return "master";
     }
     @RequestMapping("/diamond")
-    public String diamond(){
+    public String diamond(Model model){
+        model.addAttribute("currentPage", "index");
         return "diamond";
     }
     @RequestMapping("platinum")
-    public String platinum(){
+    public String platinum(Model model){
+        model.addAttribute("currentPage", "index");
         return "platinum";
     }
     @RequestMapping("gold")
-    public String gold(){
+    public String gold(Model model){
+        model.addAttribute("currentPage", "index");
         return "gold";
     }
     @RequestMapping("silver")
-    public String silver(){
+    public String silver(Model model){
+        model.addAttribute("currentPage", "index");
         return "silver";
     }
     @RequestMapping("bronze")
-    public String bronze(){
+    public String bronze(Model model){
+        model.addAttribute("currentPage", "index");
         return "bronze";
     }
     @RequestMapping("noleague")
-    public String noleague(){
+    public String noleague(Model model){
+        model.addAttribute("currentPage", "index");
         return "noleague";
     }
 
