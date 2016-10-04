@@ -36,20 +36,31 @@
                 <a class="brand" href="#">SC2Rank</a>
                 <div class="nav-collapse collapse navbar-responsive-collapse">
                     <ul class="nav">
+                        <%--首页--%>
                         <c:choose>
                             <c:when test="${currentPage == 'index'}">
-                                <li id="mainpage" class="active"><a href="<%=request.getContextPath()%>/">首页</a></li>
-                                <li id="blog"><a href="http://scarb.website/">博客</a></li>
-                                <li id="about"><a href="<%=request.getContextPath()%>/about">关于</a></li>
+                                <li id="about" class="active"><a href="<%=request.getContextPath()%>/">首页</a></li>
                             </c:when>
+                            <c:otherwise>
+                                <li id="about"><a href="<%=request.getContextPath()%>/">首页</a></li>
+                            </c:otherwise>
+                        </c:choose>
+                        <%--留言板--%>
+                        <c:choose>
+                            <c:when test="${currentPage == 'comments'}">
+                                <li id="about" class="active"><a href="<%=request.getContextPath()%>/comments">留言板</a></li>
+                            </c:when>
+                            <c:otherwise>
+                                <li id="about"><a href="<%=request.getContextPath()%>/comments">留言板</a></li>
+                            </c:otherwise>
+                        </c:choose>
+                        <li id="blog"><a href="http://scarb.website/">博客</a></li>
+                        <%--关于--%>
+                        <c:choose>
                             <c:when test="${currentPage == 'about'}">
-                                <li id="mainpage"><a href="<%=request.getContextPath()%>/">首页</a></li>
-                                <li id="blog"><a href="http://scarb.website/">博客</a></li>
                                 <li id="about" class="active"><a href="<%=request.getContextPath()%>/about">关于</a></li>
                             </c:when>
                             <c:otherwise>
-                                <li id="mainpage"><a href="<%=request.getContextPath()%>/">首页</a></li>
-                                <li id="blog"><a href="http://scarb.website/">博客</a></li>
                                 <li id="about"><a href="<%=request.getContextPath()%>/about">关于</a></li>
                             </c:otherwise>
                         </c:choose>

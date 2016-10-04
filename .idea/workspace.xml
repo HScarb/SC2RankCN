@@ -10,51 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="505876f0-695f-4c14-9544-ae84bc700ce5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_ehcache_ehcache_core_2_5_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_ehcache_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_3_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__taglibs_standard_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/controller/CommentsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/controller/UserController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/realm/ShiroDbRealm.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/service/UserSerivce.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/service/impl/UserServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/util/CipherUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/util/EncryptUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/shiro/spring-shiro.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shiro.jsp" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index2.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/pages/index2.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN.war" afterPath="$PROJECT_DIR$/target/SC2RankCN.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/com/scarb/controller/PlayerController.class" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/com/scarb/controller/PlayerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/com/scarb/controller/RegisterController.class" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/com/scarb/controller/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/com/scarb/dao/UserMapper.class" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/com/scarb/dao/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/scarb/controller/PlayerController.class" afterPath="$PROJECT_DIR$/target/classes/com/scarb/controller/PlayerController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/scarb/controller/RegisterController.class" afterPath="$PROJECT_DIR$/target/classes/com/scarb/controller/RegisterController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/scarb/dao/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/scarb/dao/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/sc2rankcn_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/sc2rankcn_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sc2rankcn.iml" afterPath="$PROJECT_DIR$/sc2rankcn.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/controller/PlayerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/controller/PlayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/controller/RegisterController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/controller/RegisterController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/dao/UserMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/dao/UserMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/classes/mapper/UserMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/pages/about.jsp" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/pages/about.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/pages/head.jsp" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/pages/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/pages/register.jsp" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/pages/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/SC2RankCN/WEB-INF/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
     </list>
     <ignored path="SC2RankCN.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -77,94 +37,116 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RegisterController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/controller/RegisterController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/controller/HomeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/controller/PlayerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="44" column="35" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="comments.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+            <state relative-caret-position="136">
+              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommentsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/controller/CommentsController.java">
+      <file leaf-file-name="bronze.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/controller/BaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shiro.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shiro.jsp">
+      <file leaf-file-name="diamond.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="63" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gold.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grandmaster.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="53" column="108" selection-start-line="53" selection-start-column="108" selection-end-line="53" selection-end-column="108" />
+            <state relative-caret-position="272">
+              <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="about.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+              <folding>
+                <marker date="1475596488379" expanded="true" signature="3076:6018" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3260:6007" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3297:5991" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3321:5970" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3342:3635" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3444:3613" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3656:3923" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3743:3901" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="3944:4290" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4031:4268" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4097:4204" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4311:4839" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4400:4817" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4454:4812" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4486:4783" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4528:4750" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4860:5178" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="4949:5156" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="5199:5487" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="5255:5465" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="5262:5460" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="5508:5861" ph="..." />
+                <marker date="1475596488379" expanded="true" signature="5882:5945" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -172,8 +154,8 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -243,10 +225,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/realm/ShiroDbRealm.java" />
         <option value="$PROJECT_DIR$/src/main/resources/shiro/spring-shiro.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/controller/PlayerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/controller/RegisterController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/shiro.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/controller/UserController.java" />
@@ -254,6 +234,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/controller/CommentsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp" />
       </list>
     </option>
   </component>
@@ -1478,7 +1460,7 @@
       <workItem from="1475400432934" duration="18196000" />
       <workItem from="1475480434351" duration="12491000" />
       <workItem from="1475567954037" duration="9431000" />
-      <workItem from="1475590668973" duration="9050000" />
+      <workItem from="1475590668973" duration="9863000" />
     </task>
     <servers />
   </component>
@@ -1515,10 +1497,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253947000" />
+    <option name="totallyTimeSpent" value="254760000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1586,13 +1568,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/service/PlayerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/service/impl/PlayerServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -1856,38 +1831,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/registerCheck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2876">
@@ -1910,46 +1853,6 @@
             <marker date="1475070133803" expanded="true" signature="1308:1321" ph="..." />
             <marker date="1475070133803" expanded="true" signature="1369:1382" ph="..." />
             <marker date="1475070133803" expanded="true" signature="1431:1444" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="49" column="86" selection-start-line="49" selection-start-column="86" selection-end-line="49" selection-end-column="86" />
-          <folding>
-            <marker date="1475596488379" expanded="true" signature="3076:6018" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3260:6007" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3297:5991" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3321:5970" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3342:3635" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3444:3613" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3656:3923" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3743:3901" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="3944:4290" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4031:4268" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4097:4204" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4311:4839" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4400:4817" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4454:4812" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4486:4783" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4528:4750" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4860:5178" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="4949:5156" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="5199:5487" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="5255:5465" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="5262:5460" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="5508:5861" ph="..." />
-            <marker date="1475596488379" expanded="true" signature="5882:5945" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2030,24 +1933,104 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="136">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="53" column="108" selection-start-line="53" selection-start-column="108" selection-end-line="53" selection-end-column="108" />
+        <state relative-caret-position="272">
+          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+          <folding>
+            <marker date="1475596488379" expanded="true" signature="3076:6018" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3260:6007" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3297:5991" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3321:5970" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3342:3635" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3444:3613" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3656:3923" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3743:3901" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="3944:4290" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4031:4268" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4097:4204" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4311:4839" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4400:4817" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4454:4812" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4486:4783" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4528:4750" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4860:5178" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="4949:5156" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="5199:5487" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="5255:5465" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="5262:5460" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="5508:5861" ph="..." />
+            <marker date="1475596488379" expanded="true" signature="5882:5945" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
