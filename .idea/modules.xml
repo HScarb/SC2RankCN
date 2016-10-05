@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SC2RankCN.iml" filepath="$PROJECT_DIR$/SC2RankCN.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sc2rank.iml" filepath="$PROJECT_DIR$/sc2rank.iml" />
     </modules>
   </component>
 </project>

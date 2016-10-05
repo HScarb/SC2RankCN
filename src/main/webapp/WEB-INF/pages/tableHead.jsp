@@ -11,7 +11,7 @@
     <div class="span12">
 
         <form id="form1">
-            <table class="table table-striped" id = 'tableResult'>
+            <table class="table table-striped tabel-hover" id = 'tableResult'>
                 <thead>
                 <tr>
                     <th>排名</th>

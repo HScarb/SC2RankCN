@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SC2RankCN:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="SC2RankCN.war">
+      <element id="artifact" artifact-name="SC2RankCN:war exploded" />
+    </root>
+  </artifact>
+</component>
