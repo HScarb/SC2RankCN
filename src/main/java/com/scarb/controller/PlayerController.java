@@ -36,11 +36,6 @@ public class PlayerController extends BaseController{
         return "index";
     }
 
-    @RequestMapping("/test")
-    public String Test(){
-        return "test";
-    }
-
     @RequestMapping("/about")
     public String about(Model model){
         model.addAttribute("currentPage", "about");

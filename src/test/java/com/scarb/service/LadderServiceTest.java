@@ -1,6 +1,7 @@
 package com.scarb.service;
 
 import com.scarb.baseTest.LadderTestCase;
+import com.scarb.model.Comment;
 import com.scarb.model.Ladder;
 import com.scarb.model.Player;
 import com.scarb.util.PagedResult;
@@ -18,6 +19,9 @@ public class LadderServiceTest extends LadderTestCase{
     @Autowired
     private PlayerService playerService;
 
+    @Autowired
+    private CommentService commentService;
+
 
     Logger logger = Logger.getLogger(LadderService.class);
 
@@ -32,5 +36,11 @@ public class LadderServiceTest extends LadderTestCase{
     public void queryByPage(){
         PagedResult<Player> pagedResult = playerService.queryNameByPage(null, 1, 10);
         logger.debug("查找结果" + pagedResult);
+    }
+
+    @Test
+    public void selectAllComments(){
+        PagedResult<Comment> pagedResult = commentService.showComments(1,10);
+        logger.debug("留言板查找结果" + pagedResult);
     }
 }
