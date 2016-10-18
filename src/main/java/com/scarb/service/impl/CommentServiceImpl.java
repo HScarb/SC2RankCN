@@ -34,11 +34,19 @@ public class CommentServiceImpl implements CommentService{
 
     @Override
     public boolean leaveComment(Comment comment) {
-        return false;
+        int n = commentMapper.insertSelective(comment);     // 选择性插入
+        if(n!=0)
+            return true;
+        else
+            return false;
     }
 
     @Override
     public boolean deleteComment(int commentID) {
-        return false;
+        int n = commentMapper.deleteByPrimaryKey(commentID);
+        if (n!=0)
+            return true;
+        else
+            return false;
     }
 }
