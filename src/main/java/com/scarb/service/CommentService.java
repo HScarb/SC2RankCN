@@ -1,6 +1,7 @@
 package com.scarb.service;
 
 import com.scarb.model.Comment;
+import com.scarb.model.CommentExample;
 import com.scarb.util.PagedResult;
 
 /**
@@ -10,11 +11,12 @@ public interface CommentService {
 
     /**
      * 根据页码和每页结果数量显示所有的留言
+     * @param commentExample
      * @param pageNo 页码
      * @param pageSize 每页显示数量
      * @return
      */
-    public PagedResult<Comment> showComments(Integer pageNo, Integer pageSize);
+    public PagedResult<Comment> showComments(CommentExample commentExample, Integer pageNo, Integer pageSize);
 
     /**
      * 返回评论数

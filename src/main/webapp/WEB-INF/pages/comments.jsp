@@ -45,11 +45,11 @@
         vertical-align: top;
     }
     .row{
-        margin-bottom:20px;
+        margin-bottom: -15px;
     }
     #CommentWords{
         width: 99%;
-        height:100px;
+        height: 100px;
     }
 
 
@@ -72,7 +72,7 @@
                     </div>
                 </li>
                 <%--提交评论--%>
-                <li class="comment">
+                <li id="commentTextArea" class="comment">
                     <div class="comment-left">
                         <img class="avatar-medium" src="http://sc2.cdn.haoest.com/Resources/Common/images/default-avatars/default.jpg" onerror="javascript:this.src='http://sc2.cdn.haoest.com/Resources/Common/images/default-avatars/default.jpg'">
                     </div>
@@ -95,12 +95,15 @@
     </div>
 </div>
 
+<script src="<%=request.getContextPath()%>/js/showComments.js"></script>
 <script type="text/javascript">
     //渲染完就执行
     $(function() {
 
         //生成底部分页栏
         $('#bottomTab').bootstrapPaginator(options);
+
+        buildComments(1, PAGESIZE);
 
         //创建结算规则
         $("#submitButton").bind("click",function(){

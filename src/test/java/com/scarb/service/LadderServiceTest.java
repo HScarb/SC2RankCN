@@ -38,9 +38,9 @@ public class LadderServiceTest extends LadderTestCase{
         logger.debug("查找结果" + pagedResult);
     }
 
-    @Test
+    /*@Test
     public void selectAllComments(){
         PagedResult<Comment> pagedResult = commentService.showComments(1,10);
         logger.debug("留言板查找结果" + pagedResult);
-    }
+    }*/
 }

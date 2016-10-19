@@ -1,9 +1,12 @@
 package com.scarb.controller;
 
 import com.scarb.model.Comment;
+import com.scarb.model.CommentExample;
+import com.scarb.model.Player;
 import com.scarb.model.User;
 import com.scarb.service.CommentService;
 import com.scarb.service.UserSerivce;
+import com.scarb.util.PagedResult;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +15,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
@@ -23,7 +28,7 @@ import java.sql.Time;
  * Created by Scarb on 10/5/2016.
  */
 @Controller
-public class CommentsController {
+public class CommentsController extends BaseController{
 
     private static Logger logger = LoggerFactory.getLogger(CommentsController.class);
 
@@ -74,5 +79,24 @@ public class CommentsController {
 
         mav.setViewName("redirect:/comments");
         return mav;
+    }
+
+    @RequestMapping(value = "commentlist", method = RequestMethod.POST,produces = "text/html;charset=UTF-8")
+    @ResponseBody
+    public String commentList(Integer pageNumber, Integer pageSize){
+        logger.info("分页查询评论信息列表请求入参：pageNumber{}, pageSize{}", pageNumber, pageSize);
+        try {
+            CommentExample commentExample = new CommentExample();
+            commentExample.setOrderByClause("COMMENT_ID DESC");     // 设置commentExample的排序方式
+
+            PagedResult<Comment> pageResult = commentService.showComments(commentExample, pageNumber, pageSize);
+            for (Comment c : pageResult.getDataList())
+            {
+                c.setCommentAuthorName((userSerivce.selectUserById(c.getCommentAuthorid()).getUserName()));
+            }
+            return responseSuccess(pageResult);
+        } catch (Exception e) {
+            return responseFail(e.getMessage());
+        }
     }
 }
