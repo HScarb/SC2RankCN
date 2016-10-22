@@ -97,7 +97,7 @@ public class PlayerController extends BaseController{
 
     @RequestMapping(value = "/listleague", method = RequestMethod.POST,produces = "text/html;charset=UTF-8")      // springmvc 发送ajax中文乱码的几种解决办法 http://wxynxyo.iteye.com/blog/2000327
     @ResponseBody
-    public String listByLeague(Integer pageNumber, Integer pageSize, String league){
+    public String listByLeague(Integer pageNumber, Integer pageSize, Integer  league){
         logger.info("分页查询玩家信息列表请求入参：pageNumber{}, pageSize{}", pageNumber, pageSize);
         try {
             PagedResult<Player> pageResult = playerService.queryLeagueByPage(league, pageNumber, pageSize);

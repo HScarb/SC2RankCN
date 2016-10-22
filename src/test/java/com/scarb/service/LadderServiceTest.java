@@ -25,12 +25,12 @@ public class LadderServiceTest extends LadderTestCase{
 
     Logger logger = Logger.getLogger(LadderService.class);
 
-    @Test
+    /*@Test
     public void selectLadderByIdTest(){
         Ladder ladder = ladderService.selectLadderById(33000);
 
         logger.debug("Ladder find ============= " + ladder.getName());
-    }
+    }*/
 
     @Test
     public void queryByPage(){

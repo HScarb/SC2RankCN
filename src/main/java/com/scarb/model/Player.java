@@ -23,13 +23,15 @@ public class Player {
 
     private String jointime;
 
-    private String league;
+    private Integer league;
 
     private Integer ladderid;
 
     private Integer winrate;
 
     private Integer updatetime;
+
+    private Integer tier;
 
     public Integer getId() {
         return id;
@@ -119,12 +121,12 @@ public class Player {
         this.jointime = jointime == null ? null : jointime.trim();
     }
 
-    public String getLeague() {
+    public Integer getLeague() {
         return league;
     }
 
-    public void setLeague(String league) {
-        this.league = league == null ? null : league.trim();
+    public void setLeague(Integer league) {
+        this.league = league == null ? null : league;
     }
 
     public Integer getLadderid() {
@@ -149,5 +151,13 @@ public class Player {
 
     public void setUpdateTime(Integer updatetime) {
         this.updatetime = updatetime;
+    }
+
+    public Integer getTier() {
+        return tier;
+    }
+
+    public void setTier(Integer tier) {
+        this.tier = tier;
     }
 }

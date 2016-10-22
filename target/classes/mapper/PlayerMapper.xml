@@ -18,15 +18,16 @@
     <result column="wins" jdbcType="INTEGER" property="wins" />
     <result column="losses" jdbcType="INTEGER" property="losses" />
     <result column="joinTime" jdbcType="VARCHAR" property="jointime" />
-    <result column="league" jdbcType="VARCHAR" property="league" />
+    <result column="league" jdbcType="INTEGER" property="league" />
     <result column="ladderid" jdbcType="INTEGER" property="ladderid" />
     <result column="updateTime" jdbcType="INTEGER" property="updatetime" />
     <result column="winRate" jdbcType="INTEGER" property="winrate" />
+    <result column="tier" jdbcType="INTEGER" property="tier" />
 
   </resultMap>
   <sql id="Base_Column_List">
     id, rank, name, clanName, clanTag, profilePath, favoriteRace, points, wins, losses, joinTime,
-    league, ladderid, updateTime, winRate
+    league, ladderid, updateTime, winRate, tier
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
@@ -42,13 +43,13 @@
     insert into player (id, name, clanName, 
       clanTag, profilePath, favoriteRace, 
       points, wins, losses, 
-      joinTime, league, ladderid
+      joinTime, league, ladderid, tier
       )
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{clanname,jdbcType=VARCHAR}, 
       #{clantag,jdbcType=VARCHAR}, #{profilepath,jdbcType=VARCHAR}, #{favoriterace,jdbcType=VARCHAR}, 
       #{points,jdbcType=INTEGER}, #{wins,jdbcType=INTEGER}, #{losses,jdbcType=INTEGER}, 
-      #{jointime,jdbcType=VARCHAR}, #{league,jdbcType=VARCHAR}, #{ladderid,jdbcType=INTEGER}
-      )
+      #{jointime,jdbcType=VARCHAR}, #{league,jdbcType=INTEGER}, #{ladderid,jdbcType=INTEGER},
+      #{tier,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="com.scarb.model.Player">
     insert into player
@@ -89,6 +90,9 @@
       <if test="ladderid != null">
         ladderid,
       </if>
+      <if test="tier != null">
+        tier,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -122,10 +126,13 @@
         #{jointime,jdbcType=VARCHAR},
       </if>
       <if test="league != null">
-        #{league,jdbcType=VARCHAR},
+        #{league,jdbcType=INTEGER},
       </if>
       <if test="ladderid != null">
         #{ladderid,jdbcType=INTEGER},
+      </if>
+      <if test="tier != null">
+        #{tier,jdbcType=INTEGER},
       </if>
     </trim>
   </insert>
@@ -160,10 +167,13 @@
         joinTime = #{jointime,jdbcType=VARCHAR},
       </if>
       <if test="league != null">
-        league = #{league,jdbcType=VARCHAR},
+        league = #{league,jdbcType=INTEGER},
       </if>
       <if test="ladderid != null">
         ladderid = #{ladderid,jdbcType=INTEGER},
+      </if>
+      <if test="ladderid != null">
+        tier = #{tier,jdbcType=INTEGER},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -179,8 +189,9 @@
       wins = #{wins,jdbcType=INTEGER},
       losses = #{losses,jdbcType=INTEGER},
       joinTime = #{jointime,jdbcType=VARCHAR},
-      league = #{league,jdbcType=VARCHAR},
+      league = #{league,jdbcType=INTEGER},
       ladderid = #{ladderid,jdbcType=INTEGER}
+      tier = #{tier,jdbcType=INTEGER}
     where id = #{id,jdbcType=INTEGER}
   </update>
 
@@ -198,16 +209,7 @@
       AND name LIKE '%${_parameter}%'
     </if>
     ORDER BY
-    CASE
-      WHEN league = 'GRANDMASTER' THEN 1
-      WHEN league = 'MASTER' THEN 2
-      WHEN league = 'DIAMOND' THEN 3
-      WHEN league = 'PLATINUM' THEN 4
-      WHEN league = 'GOLD' THEN 5
-      WHEN league = 'SILVER' THEN 6
-      WHEN league = 'BRONZE' THEN 7
-    END
-    , points DESC
+    rank
   </select>
 
   <select id="selectPlayerByClanTag" parameterType="java.lang.String" resultMap="BaseResultMap">
@@ -219,16 +221,10 @@
       AND clanTag = #{_parameter, jdbcType=VARCHAR}
     </if>
     ORDER BY
-    CASE
-      WHEN league = 'GRANDMASTER' THEN 1
-      WHEN league = 'MASTER' THEN 2
-      WHEN league = 'DIAMOND' THEN 3
-      WHEN league = 'PLATINUM' THEN 4
-      WHEN league = 'GOLD' THEN 5
-      WHEN league = 'SILVER' THEN 6
-      WHEN league = 'BRONZE' THEN 7
-    END
-    , points DESC
+    rank
+    /*league DESC ,
+    tier ,
+    points DESC*/
   </select>
 
   <select id="selectPlayerByLeague" parameterType="java.lang.String" resultMap="BaseResultMap">
@@ -240,6 +236,8 @@
       AND league = #{_parameter, jdbcType=VARCHAR}
     </if>
     ORDER BY
+    rank
+/*    ORDER BY
       CASE
         WHEN league = 'GRANDMASTER' THEN 1
         WHEN league = 'MASTER' THEN 2
@@ -249,6 +247,6 @@
         WHEN league = 'SILVER' THEN 6
         WHEN league = 'BRONZE' THEN 7
       END
-    , points DESC
+    , points DESC*/
   </select>
 </mapper>

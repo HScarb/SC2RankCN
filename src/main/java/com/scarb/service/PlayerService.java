@@ -16,9 +16,9 @@ public interface PlayerService {
 
     public List<Player> selectPlayerByClanTag(String clanTag);
 
-    public List<Player> selectPlayerByLeague(String league);
+    public List<Player> selectPlayerByLeague(Integer league);
 
     PagedResult<Player> queryNameByPage(String playerName, Integer pageNo, Integer pageSize);
     PagedResult<Player> queryClanTagByPage(String clanTag, Integer pageNo, Integer pageSize);
-    PagedResult<Player> queryLeagueByPage(String league, Integer pageNo, Integer pageSize);
+    PagedResult<Player> queryLeagueByPage(Integer league, Integer pageNo, Integer pageSize);
 }

@@ -37,7 +37,7 @@ public class PlayerServiceImpl implements PlayerService{
     }
 
     @Override
-    public List<Player> selectPlayerByLeague(String league) {
+    public List<Player> selectPlayerByLeague(Integer league) {
         return playerDao.selectPlayerByLeague(league);
     }
 
@@ -58,7 +58,7 @@ public class PlayerServiceImpl implements PlayerService{
     }
 
     @Override
-    public PagedResult<Player> queryLeagueByPage(String league, Integer pageNo, Integer pageSize) {
+    public PagedResult<Player> queryLeagueByPage(Integer league, Integer pageNo, Integer pageSize) {
         pageNo = pageNo == null ? 1 : pageNo;
         pageSize = pageSize == null ? 10 : pageSize;
         PageHelper.startPage(pageNo, pageSize); // startPage告诉拦截器开始分页，分页参数是这两个

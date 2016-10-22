@@ -26,5 +26,5 @@ public interface PlayerMapper {
 
     public List<Player> selectPlayerByClanTag(String clanTag);
 
-    public List<Player> selectPlayerByLeague(String league);
+    public List<Player> selectPlayerByLeague(Integer league);
 }

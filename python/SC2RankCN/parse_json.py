@@ -124,11 +124,13 @@ def parsePlayersInfo(ladderTuple):
     """
     从某个天梯解析出其中所有的玩家
     :param ladderTuple: 从数据库中提取出来的ladderTuple (33000, '阿塔尼斯 ·埃塔', 'DIAMOND', 'LOTV_SOLO', 99, 0)
+    :param ladderTuple: new: (33998, 0, 29, 201, 0, 0, 96, 2332, 2520) id, league, season, queue, teamtype, tier, count, minR, maxR
     """
     playersInfo = []
     url = 'https://api.battlenet.com.cn/sc2/ladder/' + str(ladderTuple[0]) + '?locale=zh_CN&apikey=smrfmd762jv8z9uqem7uufeadu8z8493'
     try:
-        r = requests.get(url)
+        r = requests.get(url, timeout = 20)
+        print('Request ', url , ' COMPLETE.')
         data = json.loads(r.text)
     except:
         print('Error when request url=', url)
@@ -149,13 +151,90 @@ def parsePlayersInfo(ladderTuple):
             player['wins'] = p['wins']
             player['losses'] = p['losses']
             player['joinTime'] = p['joinTimestamp']
-            player['league'] = ladderTuple[2]
+            player['league'] = ladderTuple[1]
             player['ladderid'] = ladderTuple[0]
             player['updateTime'] = time.time()
             player['winRate'] = p['wins'] / (p['wins'] + p['losses']) * 100
+            player['tier'] = ladderTuple[5]
             playersInfo.append(player)
     except:
         print('Error when appending player data.')
 
     return playersInfo
 
+def parseCurrentSeason():
+    url = 'https://api.battlenet.com.cn/data/sc2/season/current?access_token=u266w4zrqha2hg4quebgd3mq'
+    try:
+        r = requests.get(url)
+        jsonData = json.loads(r.text)
+    except:
+        print('Error when request url=', url)
+        return None
+    return jsonData["id"]
+
+def parseLaddersByData(leagueID = 6, seasonID = 29, queueID = 201, teamType = 0):
+    """
+    根据参数解析出一个符合参数的ladder list
+    :param seasonID: 赛季号
+    :param queueID:  天梯联赛种类
+        Queue ID
+
+        1 - Wings of Liberty 1v1
+        2 - Wings of Liberty 2v2
+        3 - Wings of Liberty 3v3
+        4 - Wings of Liberty 4v4
+        101 - Heart of the Swarm 1v1
+        102 - Heart of the Swarm 2v2
+        103 - Heart of the Swarm 3v3
+        104 - Heart of the Swarm 4v4
+        201 - Legacy of the Void 1v1
+        202 - Legacy of the Void 2v2
+        203 - Legacy of the Void 3v3
+        204 - Legacy of the Void 4v4
+        206 - Legacy of the Void Archon
+    :param teamType: 组队类型
+        Team Type
+
+        0 - Arranged
+        1 - Random
+    :param leagueID: 组别
+        League ID
+
+        0 - Bronze
+        1 - Silver
+        2 - Gold
+        3 - Platinum
+        4 - Diamond
+        5 - Master
+        6 - Grandmaster
+    """
+    ladderList = []
+    url = 'https://api.battlenet.com.cn/data/sc2/league/' + str(seasonID) + '/' + str(queueID) + '/' + str(teamType) + '/' + str(leagueID) + '?access_token=u266w4zrqha2hg4quebgd3mq'
+    try:
+        r = requests.get(url)
+        jsonData = json.loads(r.text)
+    except:
+        print('Error when request url=', url)
+        return None
+    tier = jsonData["tier"]
+    for item in tier:
+        for ld in item["division"]:
+            ladder = {}
+            ladder["id"] = ld["ladder_id"]
+            ladder["league"] = leagueID
+            ladder["season"] = seasonID
+            ladder["queue"] = queueID
+            ladder["teamtype"] = teamType
+            ladder["tier"] = item["id"]     # 组别等级
+            ladder["member_count"] = ld["member_count"]
+            ladder["min_rating"] = item["min_rating"]
+            ladder["max_rating"] = item["max_rating"]
+            ladderList.append(ladder)
+    print(ladderList)
+    return ladderList
+
+
+if __name__ == '__main__':
+    season = parseCurrentSeason()
+    print(season)
+    parseLaddersByData(5, season,201, 0)

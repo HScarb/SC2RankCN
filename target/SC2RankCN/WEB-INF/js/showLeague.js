@@ -83,22 +83,24 @@ function buildTable(league,pageNumber,pageSize) {
                             $("#tableBody").append('<tr>');
                             $("#tableBody").append('<td>' + this.rank + '</td>');
                             // 组别
-                            if (this.league == "GRANDMASTER")
+                            if (this.league == 6)
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade7.png">' + '</td>');
-                            else if (this.league == "MASTER")
+                            else if (this.league == 5)
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade6.png">' + '</td>');
-                            else if (this.league == "DIAMOND")
+                            else if (this.league == 4)
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade5.png">' + '</td>');
-                            else if (this.league == "PLATINUM")
+                            else if (this.league == 3)
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade4.png">' + '</td>');
-                            else if (this.league == "GOLD")
+                            else if (this.league == 2)
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade3.png">' + '</td>');
-                            else if (this.league == "SILVER")
+                            else if (this.league == 1)
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade2.png">' + '</td>');
-                            else if (this.league == "BRONZE")
+                            else if (this.league == 0)
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade1.png">' + '</td>');
                             else
                                 $("#tableBody").append('<td>' + '</td>');
+                            // 层级
+                            $("#tableBody").append('<td>' + this.tier + '</td>');
                             // 种族
                             if(this.favoriterace == 'TERRAN')
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/race_t.png">' + '</td>');
