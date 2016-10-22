@@ -82,25 +82,79 @@ function buildTable(league,pageNumber,pageSize) {
                             var date = new Date(Number(this.jointime) * 1000);
                             $("#tableBody").append('<tr>');
                             $("#tableBody").append('<td>' + this.rank + '</td>');
-                            // 组别
-                            if (this.league == 6)
+                            // 组别和层级
+                            if (this.league == 6) {
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade7.png">' + '</td>');
-                            else if (this.league == 5)
+                                $("#tableBody").append('<td>' + '</td>');
+                            }
+                            else if (this.league == 5) {
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade6.png">' + '</td>');
-                            else if (this.league == 4)
+                                if (this.tier == 0)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/master1Icon.png">' + '</td>');
+                                else if(this.tier == 1)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/master2Icon.png">' + '</td>');
+                                else if(this.tier == 2)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/master3Icon.png">' + '</td>');
+                                else
+                                    $("#tableBody").append('<td>' + '</td>');
+                            }
+                            else if (this.league == 4) {
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade5.png">' + '</td>');
-                            else if (this.league == 3)
+                                if (this.tier == 0)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/diamond1Icon.png">' + '</td>');
+                                else if(this.tier == 1)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/diamond2Icon.png">' + '</td>');
+                                else if(this.tier == 2)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/diamond3Icon.png">' + '</td>');
+                                else
+                                    $("#tableBody").append('<td>' + '</td>');
+                            }
+                            else if (this.league == 3) {
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade4.png">' + '</td>');
-                            else if (this.league == 2)
+                                if (this.tier == 0)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/platinum1Icon.png">' + '</td>');
+                                else if(this.tier == 1)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/platinum2Icon.png">' + '</td>');
+                                else if(this.tier == 2)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/platinum3Icon.png">' + '</td>');
+                                else
+                                    $("#tableBody").append('<td>' + '</td>');
+                            }
+                            else if (this.league == 2) {
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade3.png">' + '</td>');
-                            else if (this.league == 1)
+                                if (this.tier == 0)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/gold1Icon.png">' + '</td>');
+                                else if(this.tier == 1)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/gold2Icon.png">' + '</td>');
+                                else if(this.tier == 2)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/gold3Icon.png">' + '</td>');
+                                else
+                                    $("#tableBody").append('<td>' + '</td>');
+                            }
+                            else if (this.league == 1) {
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade2.png">' + '</td>');
-                            else if (this.league == 0)
+                                if (this.tier == 0)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/silver1Icon.png">' + '</td>');
+                                else if(this.tier == 1)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/silver2Icon.png">' + '</td>');
+                                else if(this.tier == 2)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/silver3Icon.png">' + '</td>');
+                                else
+                                    $("#tableBody").append('<td>' + '</td>');
+                            }
+                            else if (this.league == 0) {
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/grade1.png">' + '</td>');
+                                if (this.tier == 0)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/bronze1Icon.png">' + '</td>');
+                                else if(this.tier == 1)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/bronze2Icon.png">' + '</td>');
+                                else if(this.tier == 2)
+                                    $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/bronze3Icon.png">' + '</td>');
+                                else
+                                    $("#tableBody").append('<td>' + '</td>');
+                            }
                             else
                                 $("#tableBody").append('<td>' + '</td>');
-                            // 层级
-                            $("#tableBody").append('<td>' + this.tier + '</td>');
                             // 种族
                             if(this.favoriterace == 'TERRAN')
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/race_t.png">' + '</td>');

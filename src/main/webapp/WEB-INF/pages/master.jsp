@@ -28,7 +28,7 @@
         //生成底部分页栏
         $('#bottomTab').bootstrapPaginator(options);
 
-        buildTable("MASTER",1,PAGESIZE);//默认空白查全部
+        buildTable(5,1,PAGESIZE);//默认空白查全部
     });
 </script>
 </body>

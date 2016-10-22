@@ -10,20 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="505876f0-695f-4c14-9544-ae84bc700ce5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/SC2RankCN/execute.py" afterPath="$PROJECT_DIR$/python/SC2RankCN/execute.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/SC2RankCN/parse_json.py" afterPath="$PROJECT_DIR$/python/SC2RankCN/parse_json.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/python/SC2RankCN/sql_service.py" afterPath="$PROJECT_DIR$/python/SC2RankCN/sql_service.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/controller/PlayerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/controller/PlayerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/dao/PlayerMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/dao/PlayerMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/model/Player.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/model/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/service/PlayerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/service/PlayerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/scarb/service/impl/PlayerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/scarb/service/impl/PlayerServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/PlayerMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PlayerMapper.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showLeague.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showLeague.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showTable.js" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showTable.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/tableHead.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/tableHead.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/scarb/service/LadderServiceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/scarb/service/LadderServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/master.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/master.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/platinum.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/platinum.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/silver.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/silver.jsp" />
     </list>
     <ignored path="SC2RankCN.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,92 +43,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CommentsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/controller/CommentsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1360">
-              <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LadderServiceTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/scarb/service/LadderServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/service/PlayerService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/service/impl/PlayerServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-              <folding>
-                <element signature="e#1004#1005#0" expanded="true" />
-                <element signature="e#1065#1066#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/service/CommentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/service/impl/CommentServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1011#1012#0" expanded="false" />
-                <element signature="e#1035#1036#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommentMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/dao/CommentMapper.java">
+      <file leaf-file-name="gold.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showTable.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showTable.js">
+      <file leaf-file-name="PlayerMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/dao/PlayerMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="152" column="115" selection-start-line="152" selection-start-column="115" selection-end-line="152" selection-end-column="115" />
+              <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -140,8 +66,78 @@
       <file leaf-file-name="showLeague.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showLeague.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="102" selection-end-column="81" />
+            <state relative-caret-position="236">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="diamond.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grandmaster.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="master.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/master.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="platinum.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/platinum.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="147">
+              <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="silver.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/silver.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bronze.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -172,13 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/master.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/noleague.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/platinum.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/silver.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/service/RegisterService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/springmvc/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/app-context.xml" />
@@ -205,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/generatorConfig.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/model/Comment.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CommentMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/controller/RegisterController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/dao/CommentMapper.java" />
@@ -218,11 +206,19 @@
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/dao/PlayerMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/tableHead.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showLeague.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/service/impl/PlayerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/scarb/service/PlayerService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/PlayerMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showTable.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showLeague.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/master.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/platinum.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/silver.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp" />
       </list>
     </option>
   </component>
@@ -367,7 +363,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC2RankCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SC2RankCN" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -389,7 +403,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scarb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -411,29 +429,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="mapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SC2RankCN" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SC2RankCN" />
+              <option name="myItemId" value="scarb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1153,7 +1157,7 @@
       <workItem from="1476843785938" duration="11791000" />
       <workItem from="1476866899454" duration="142000" />
       <workItem from="1477056342391" duration="602000" />
-      <workItem from="1477117244708" duration="5085000" />
+      <workItem from="1477117244708" duration="7278000" />
     </task>
     <servers />
   </component>
@@ -1190,10 +1194,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316024000" />
+    <option name="totallyTimeSpent" value="318217000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1210,12 +1214,12 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32312566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32723358" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32629356" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27666315" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27666315" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19322917" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1262,12 +1266,6 @@
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showTable.js</url>
-          <line>83</line>
-          <properties />
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="28" />
     </breakpoint-manager>
@@ -1278,49 +1276,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/shiro/spring-shiro.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="32" column="23" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/head.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1332,13 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1462,14 +1410,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="22" column="51" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1564">
-          <caret line="92" column="17" selection-start-line="92" selection-start-column="17" selection-end-line="92" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1614,14 +1554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/dao/PlayerMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/PlayerMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
@@ -1678,18 +1610,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showLeague.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showTable.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="101" column="28" selection-start-line="101" selection-start-column="28" selection-end-line="102" selection-end-column="81" />
+        <state relative-caret-position="238">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="157" selection-end-column="73" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showTable.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/scarb/dao/PlayerMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="152" column="115" selection-start-line="152" selection-start-column="115" selection-end-line="152" selection-end-column="115" />
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/showLeague.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gold.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="14" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/diamond.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/grandmaster.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/master.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/platinum.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/silver.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bronze.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/comments.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="64" column="37" selection-start-line="64" selection-start-column="37" selection-end-line="64" selection-end-column="37" />
           <folding />
         </state>
       </provider>

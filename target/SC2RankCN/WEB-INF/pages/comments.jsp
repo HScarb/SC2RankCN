@@ -63,14 +63,6 @@
         </div>
         <div class="accordion-inner">
             <ul class="comment-list">
-                <li class="comment">
-                    <div class="comment-left">
-
-                    </div>
-                    <div class="comment-body">
-                        <p>测试评论</p>
-                    </div>
-                </li>
                 <%--提交评论--%>
                 <li id="commentTextArea" class="comment">
                     <div class="comment-left">

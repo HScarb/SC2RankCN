@@ -64,6 +64,8 @@ def addLaddersByData(leagueID = 6, seasonID = 29, queueID = 201, teamType = 0):
     # ladder["tire"]: 组别中的小组别
     print('parsing ladders leagueID: ' + str(leagueID))
     ladderList = parse_json.parseLaddersByData(leagueID, seasonID, queueID, teamType)
+    if ladderList == None or ladderList == []:
+        return
     for ladder in ladderList:
         print('Add ladder # ' + str(ladder["id"]) + ' in db.')
         sql_service.db_addNewLadder(ladder)
@@ -76,17 +78,17 @@ def checkNewLadder(maxLadderId):
 if __name__ == '__main__':
     # 得到当前赛季号
     season = parse_json.parseCurrentSeason()
-    #
-    # # 将玩家数据表现清空
-    # print('clearing player table...')
-    # sql_service.db_clearTable('player')
-    #
-    # for i in range(6, 0, -1):
-    #     addLaddersByData(i, season)
 
-    # for i in range(6, 0, -1):
-    #     print('parsing players in leage # ', i)
-    #     parsePlayersFromNewLaddersByData(season, i)
+    # 将玩家数据表现清空
+    print('clearing player table...')
+    sql_service.db_clearTable('player')
+
+    for i in range(6, 0, -1):
+        addLaddersByData(i, season)
+
+    for i in range(6, 0, -1):
+        print('parsing players in leage # ', i)
+        parsePlayersFromNewLaddersByData(season, i)
 
     # 将玩家表按组别和分数添加排名序号
     print('ordering players rank....')

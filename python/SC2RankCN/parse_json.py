@@ -217,6 +217,9 @@ def parseLaddersByData(leagueID = 6, seasonID = 29, queueID = 201, teamType = 0)
         print('Error when request url=', url)
         return None
     tier = jsonData["tier"]
+    if not "division" in tier[0]:
+        print('Ladder in league #', leagueID, ' is not ready.')
+        return None
     for item in tier:
         for ld in item["division"]:
             ladder = {}
