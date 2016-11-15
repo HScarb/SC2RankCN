@@ -83,10 +83,10 @@ if __name__ == '__main__':
     print('clearing player table...')
     sql_service.db_clearTable('player')
 
-    for i in range(6, 0, -1):
+    for i in range(6, -1, -1):
         addLaddersByData(i, season)
 
-    for i in range(6, 0, -1):
+    for i in range(6, -1, -1):
         print('parsing players in leage # ', i)
         parsePlayersFromNewLaddersByData(season, i)
 

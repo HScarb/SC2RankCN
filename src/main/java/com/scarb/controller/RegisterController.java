@@ -44,7 +44,7 @@ public class RegisterController {
 
     @RequestMapping(value = "/register/checkUserName", method = RequestMethod.POST)
     public String checkUserName(HttpServletRequest request, HttpServletResponse response) throws IOException{
-        String userName = (String) request.getParameter("userName");
+        String userName = (String) request.getParameter("username");
         // 检测同户名是否存在
         UserExample userExample = new UserExample();
         Criteria conditionCri = userExample.createCriteria();

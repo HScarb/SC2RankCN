@@ -89,6 +89,9 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
 
   <!--&lt;!&ndash; 错误跳转页面 &ndash;&gt;-->
   <!--<error-page>-->
