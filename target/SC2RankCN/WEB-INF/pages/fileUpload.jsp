@@ -28,8 +28,14 @@
         <input type="file" name="file" />
         <input type="submit" value="上 传" />
     </form>
+    <form action="file/onefile2"
+          method="post" enctype="multipart/form-data">
+        <input type="file" name="file" />
+        <input type="submit" value="上 传" />
+    </form>
     <h5>上传结果：</h5>
-    <img alt="暂无图片" src="${fileUrl}" />
+    <img alt="暂无图片" src="<%=request.getContextPath()%>/portraits/${fileName}" />
+
 </center>
 </body>
 </html>
