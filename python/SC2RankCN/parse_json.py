@@ -162,6 +162,10 @@ def parsePlayersInfo(ladderTuple):
 
     return playersInfo
 
+def parsePlayerInfo(id, name):
+    playerInfo = {}
+    url = ''
+
 def parseCurrentSeason():
     url = 'https://api.battlenet.com.cn/data/sc2/season/current?access_token=u266w4zrqha2hg4quebgd3mq'
     try:

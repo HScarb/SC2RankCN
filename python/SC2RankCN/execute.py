@@ -50,6 +50,7 @@ def parsePlayersFromNewLaddersByData(season, league, queue = 201, teamtype = 0):
     ladders = sql_service.db_selectNewLadderByData(season, league, queue, teamtype)
     for ladder in ladders:
         print('Adding player in ladder # ', ladder[0])
+        sql_service.db_deletePlayersInLadder(ladder[0])
         playersInfo = parse_json.parsePlayersInfo(ladder)
         if playersInfo != None:
             print('PlayersInfo got. Now adding into data base.')
@@ -80,8 +81,8 @@ if __name__ == '__main__':
     season = parse_json.parseCurrentSeason()
 
     # 将玩家数据表现清空
-    print('clearing player table...')
-    sql_service.db_clearTable('player')
+    #print('clearing player table...')
+    #sql_service.db_clearTable('player')
 
     for i in range(6, -1, -1):
         addLaddersByData(i, season)

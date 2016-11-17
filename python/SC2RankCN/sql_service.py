@@ -12,7 +12,10 @@ def db_addLadder(ld):
         conn.commit()
 
     except mysql.connector.Error as e:
+        print('Error occur in db_addLadder.')
         print(e)
+    except:
+        print('Error occur in db_addLadder.')
 
 def db_addNewLadder(ld):
     try:
@@ -22,6 +25,7 @@ def db_addNewLadder(ld):
                        ld['member_count'], ld['min_rating'], ld['max_rating']])
         conn.commit()
     except mysql.connector.Error as e:
+        print('Error occur in db_addNewLadder.')
         print(e)
     except:
         print('Error occur in db_addNewLadder.')
@@ -33,7 +37,10 @@ def db_selectLadderByQueue(queue):
 
         return values
     except mysql.connector.Error as e:
+        print('Error occur in db_selectLadderByQueue')
         print(e)
+    except:
+        print('Error occur in db_selectLadderByQueue')
 
 def db_selectNewLadderByData(season, league, queue = 201, teamtype = 0):
     try:
@@ -65,6 +72,15 @@ def db_addLadderTier(ladderId, tier):
     except:
         print('db_addLadderTier Error')
 
+def db_deletePlayersInLadder(ladderId):
+    try:
+        print('Clearing the playersInfo in ladder #', ladderId)
+        cursor.execute('delete from player where ladderid = %s', [ladderId])
+        conn.commit()
+    except mysql.connector.Error as e:
+        print(e)
+    except:
+        print('db_deletePlayersInLadder Error')
 
 def db_addPlayers(players):
     try:
