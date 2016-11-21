@@ -50,13 +50,14 @@ def parsePlayersFromNewLaddersByData(season, league, queue = 201, teamtype = 0):
     ladders = sql_service.db_selectNewLadderByData(season, league, queue, teamtype)
     for ladder in ladders:
         print('Adding player in ladder # ', ladder[0])
-        sql_service.db_deletePlayersInLadder(ladder[0])
-        playersInfo = parse_json.parsePlayersInfo(ladder)
+        playersInfo = parse_json.parsePlayersInfoNew(ladder)
+
         if playersInfo != None:
+            sql_service.db_deletePlayersInLadder(ladder[0])
             print('PlayersInfo got. Now adding into data base.')
             sql_service.db_addPlayers(playersInfo)
         else:
-            print('playersInfo is None')
+            print('PlayersInfo is None, maybe can\'t request url or url status is not OK.')
             continue
 
 def addLaddersByData(leagueID = 6, seasonID = 29, queueID = 201, teamType = 0):

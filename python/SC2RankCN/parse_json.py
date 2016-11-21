@@ -135,6 +135,7 @@ def parsePlayersInfo(ladderTuple):
     except:
         print('Error when request url=', url)
         return None
+
     try:
         for p in data['ladderMembers']:
             player = {}
@@ -159,12 +160,57 @@ def parsePlayersInfo(ladderTuple):
             playersInfo.append(player)
     except:
         print('Error when appending player data.')
+        return None
 
     return playersInfo
 
-def parsePlayerInfo(id, name):
-    playerInfo = {}
-    url = ''
+def parsePlayersInfoNew(ladderTuple):
+    """
+    从某个天梯解析出其中所有的玩家
+    :param ladderTuple: 从数据库中提取出来的ladderTuple (33000, '阿塔尼斯 ·埃塔', 'DIAMOND', 'LOTV_SOLO', 99, 0)
+    :param ladderTuple: new: (33998, 0, 29, 201, 0, 0, 96, 2332, 2520) id, league, season, queue, teamtype, tier, count, minR, maxR
+    """
+    playersInfo = []
+    url = 'https://api.battlenet.com.cn/data/sc2/ladder/' + str(ladderTuple[0]) + '?access_token=u266w4zrqha2hg4quebgd3mq'
+    try:
+        r = requests.get(url, timeout = 20)
+        print('Request ', url , ' COMPLETE.')
+        data = json.loads(r.text)
+    except:
+        print('Error when request url=', url)
+        return None
+
+
+    for p in data['team']:
+        try:
+            player = {}
+            player['id'] = p['member'][0]['character_link']['id']
+            player['name'] = p['member'][0]['legacy_link']['name']
+            player['clanName'] = p['member'][0]['clan_link']['clan_name']
+            player['clanTag'] = p['member'][0]['clan_link']['clan_tag']
+            player['profilePath'] = p['member'][0]['legacy_link']['path']
+            player['favoriteRace'] = p['member'][0]['played_race_count'][0]['race']['en_US']
+            player['points'] = p['points']
+            player['wins'] = p['wins']
+            player['losses'] = p['losses']
+            player['joinTime'] = p['join_time_stamp']
+            player['league'] = ladderTuple[1]
+            player['ladderid'] = ladderTuple[0]
+            player['updateTime'] = time.time()
+            player['winRate'] = p['wins'] / (p['wins'] + p['losses']) * 100
+            player['tier'] = ladderTuple[5]
+            player['mmr'] = p['rating']
+        except:
+            if player != {} and player['name']:
+                print('Error when appending player: %s \'s data.' % player['name'])
+            else:
+                print('Error when appending player ? \'s data')
+        finally:
+            playersInfo.append(player)
+
+
+    return playersInfo
+
 
 def parseCurrentSeason():
     url = 'https://api.battlenet.com.cn/data/sc2/season/current?access_token=u266w4zrqha2hg4quebgd3mq'
