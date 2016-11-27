@@ -3,7 +3,7 @@ import json
 
 import time
 
-
+'''
 class Player:
     def __init__(self,
                  id,
@@ -39,7 +39,10 @@ class Ladder:
         self.queue = queue
         self.playernum = playernum
         self.iscurrent = iscurrent
+'''
 
+access_token = '86mmf2mykcndnpf9kkgfqqq3'
+apikey = 'smrfmd762jv8z9uqem7uufeadu8z8493'
 
 def _parse_ladder_member(ladderData):
     data = json.loads(ladderData)
@@ -51,7 +54,7 @@ def parseLadderInfo(ladderID):
     playerData = {}
     memberNum = 0
     try:
-        url = 'https://api.battlenet.com.cn/sc2/ladder/' + str(ladderID) + '?locale=zh_CN&apikey=smrfmd762jv8z9uqem7uufeadu8z8493'
+        url = 'https://api.battlenet.com.cn/sc2/ladder/' + str(ladderID) + '?locale=zh_CN&apikey=' + apikey
         r = requests.get(url)
         data = json.loads(r.text)
         if 'ladderMembers' not in data:
@@ -70,7 +73,7 @@ def parseLadderInfo(ladderID):
     else:
         memberNum = len(data['ladderMembers'])
         # 根据解析出来的玩家信息，拼接出一个玩家信息的url
-        url = 'https://api.battlenet.com.cn/sc2' + playerData['profilePath'] + 'ladders?locale=zh_CN&apikey=smrfmd762jv8z9uqem7uufeadu8z8493'
+        url = 'https://api.battlenet.com.cn/sc2' + playerData['profilePath'] + 'ladders?locale=zh_CN&apikey=' + apikey
         try:
             findLadder = False
             ladder = {}
@@ -127,7 +130,7 @@ def parsePlayersInfo(ladderTuple):
     :param ladderTuple: new: (33998, 0, 29, 201, 0, 0, 96, 2332, 2520) id, league, season, queue, teamtype, tier, count, minR, maxR
     """
     playersInfo = []
-    url = 'https://api.battlenet.com.cn/sc2/ladder/' + str(ladderTuple[0]) + '?locale=zh_CN&apikey=smrfmd762jv8z9uqem7uufeadu8z8493'
+    url = 'https://api.battlenet.com.cn/sc2/ladder/' + str(ladderTuple[0]) + '?locale=zh_CN&apikey=' + apikey
     try:
         r = requests.get(url, timeout = 20)
         print('Request ', url , ' COMPLETE.')
@@ -171,7 +174,7 @@ def parsePlayersInfoNew(ladderTuple):
     :param ladderTuple: new: (33998, 0, 29, 201, 0, 0, 96, 2332, 2520) id, league, season, queue, teamtype, tier, count, minR, maxR
     """
     playersInfo = []
-    url = 'https://api.battlenet.com.cn/data/sc2/ladder/' + str(ladderTuple[0]) + '?access_token=u266w4zrqha2hg4quebgd3mq'
+    url = 'https://api.battlenet.com.cn/data/sc2/ladder/' + str(ladderTuple[0]) + '?access_token=' + access_token
     try:
         r = requests.get(url, timeout = 20)
         print('Request ', url , ' COMPLETE.')
@@ -184,21 +187,46 @@ def parsePlayersInfoNew(ladderTuple):
     for p in data['team']:
         try:
             player = {}
-            player['id'] = p['member'][0]['character_link']['id']
-            player['name'] = p['member'][0]['legacy_link']['name']
-            player['clanName'] = p['member'][0]['clan_link']['clan_name']
-            player['clanTag'] = p['member'][0]['clan_link']['clan_tag']
-            player['profilePath'] = p['member'][0]['legacy_link']['path']
-            player['favoriteRace'] = p['member'][0]['played_race_count'][0]['race']['en_US']
+            player['ladderid'] = ladderTuple[0]
+            player['league'] = ladderTuple[1]
+            player['season'] = ladderTuple[2]
+            player['tier'] = ladderTuple[5]
+            member = p['member'][0]
+            if 'character_link' in member:
+                player['id'] = member['character_link']['id']
+                player['bnetname'] = member['character_link']['battle_tag']
+            else:
+                player['id'] = None
+                player['bnetname'] = None
+            if 'legacy_link' in member:
+                player['name'] = member['legacy_link']['name']
+            else:
+                player['name'] = None
+            if 'clan_link' in member:
+                player['clanName'] = member['clan_link']['clan_name']
+                player['clanTag'] = member['clan_link']['clan_tag']
+            else:
+                player['clanName'] = None
+                player['clanTag'] = None
+            if 'legacy_link' in member:
+                player['profilePath'] = member['legacy_link']['path']
+            else:
+                player['profilePath'] = None
+            if 'played_race_count' in member:
+                player['favoriteRace'] = member['played_race_count'][0]['race']['en_US']
+            else:
+                player['favoriteRace'] = None
             player['points'] = p['points']
             player['wins'] = p['wins']
             player['losses'] = p['losses']
+            player['ties'] = p['ties']
             player['joinTime'] = p['join_time_stamp']
-            player['league'] = ladderTuple[1]
-            player['ladderid'] = ladderTuple[0]
+            player['lastPlayedTime'] = p['last_played_time_stamp']
+            player['longestwinstreak'] = p['longest_win_streak']
+            player['currentwinstreak'] = p['current_win_streak']
+
             player['updateTime'] = time.time()
             player['winRate'] = p['wins'] / (p['wins'] + p['losses']) * 100
-            player['tier'] = ladderTuple[5]
             player['mmr'] = p['rating']
         except:
             if player != {} and player['name']:
@@ -213,7 +241,7 @@ def parsePlayersInfoNew(ladderTuple):
 
 
 def parseCurrentSeason():
-    url = 'https://api.battlenet.com.cn/data/sc2/season/current?access_token=u266w4zrqha2hg4quebgd3mq'
+    url = 'https://api.battlenet.com.cn/data/sc2/season/current?access_token=' + access_token
     try:
         r = requests.get(url)
         jsonData = json.loads(r.text)
@@ -259,7 +287,7 @@ def parseLaddersByData(leagueID = 6, seasonID = 29, queueID = 201, teamType = 0)
         6 - Grandmaster
     """
     ladderList = []
-    url = 'https://api.battlenet.com.cn/data/sc2/league/' + str(seasonID) + '/' + str(queueID) + '/' + str(teamType) + '/' + str(leagueID) + '?access_token=u266w4zrqha2hg4quebgd3mq'
+    url = 'https://api.battlenet.com.cn/data/sc2/league/' + str(seasonID) + '/' + str(queueID) + '/' + str(teamType) + '/' + str(leagueID) + '?access_token=' + access_token
     try:
         r = requests.get(url)
         jsonData = json.loads(r.text)

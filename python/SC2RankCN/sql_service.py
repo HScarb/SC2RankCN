@@ -55,13 +55,22 @@ def db_selectNewLadderByData(season, league, queue = 201, teamtype = 0):
         print('Error occur in db_selectNewLadderByData.')
 
 def db_addPlayer(player):
-    cursor.execute('replace into player (id, name, clanName, clanTag, favoriteRace, points, wins, losses, joinTime, league, profilePath, '
-                   'ladderid, updateTime, winRate, tier) '
-                   'values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
-                   [player['id'], player['name'], player['clanName'], player['clanTag'], player['favoriteRace'],
-                    player['points'], player['wins'], player['losses'], player['joinTime'], player['league'], player['profilePath'],
-                    player['ladderid'], player['updateTime'], player['winRate'], player['tier']])
-    conn.commit()
+    try:
+        cursor.execute('replace into player '
+                       '(id, season, name, bnetname, clanName, clanTag, favoriteRace, league, tier, '
+                       'mmr, points, wins, losses, ties, ladderid, updateTime, lastPlayedTime, joinTime, '
+                       'winRate, profilePath) '
+                       'values (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)',
+                       [player['id'], player['season'], player['name'], player['bnetname'],
+                        player['clanName'], player['clanTag'], player['favoriteRace'], player['league'], player['tier'],
+                        player['mmr'], player['points'], player['wins'], player['losses'], player['ties'],
+                        player['ladderid'], player['updateTime'], player['lastPlayedTime'], player['joinTime'],
+                        player['winRate'], player['profilePath']])
+        conn.commit()
+    except Exception as e:
+        print('Error in db_addPlayer: ', player['name'])
+        print(e)
+
 
 def db_addLadderTier(ladderId, tier):
     try:
@@ -83,11 +92,8 @@ def db_deletePlayersInLadder(ladderId):
         print('db_deletePlayersInLadder Error')
 
 def db_addPlayers(players):
-    try:
-        for p in players:
-            db_addPlayer(p)
-    except:
-        print('Error in db_addPlayers')
+    for p in players:
+        db_addPlayer(p)
 
 def db_selectNewestLadder():
     try:
@@ -110,7 +116,7 @@ def db_orderPlayerByRank():
             ORDER BY
                 league DESC ,
                 tier ,
-                points DESC
+                mmr DESC
         )t
         SET r.rank = t.rowNum
         WHERE r.id = t.id
