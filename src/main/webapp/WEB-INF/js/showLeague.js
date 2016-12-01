@@ -34,6 +34,21 @@ var urlRootContext = (function () {
     return postPath;
 })();
 
+function dateDiff(d1, d2) {
+    var timeDiff = Math.abs(d1.getTime() - d2.getTime());
+    if (timeDiff > 86400000)
+    {
+        return parseInt(timeDiff / 86400000) + "d";
+    }
+    else if (timeDiff > 3600000)
+    {
+        return parseInt(timeDiff / 3600000) + "h";
+    }
+    else
+    {
+        return parseInt(timeDiff / 60000) + "m";
+    }
+}
 
 //生成表格
 function buildTable(league,pageNumber,pageSize) {
@@ -50,6 +65,7 @@ function buildTable(league,pageNumber,pageSize) {
             success: function(data){
                 if(data.isError == false) {
                     // options.totalPages = data.pages;
+                    var now = new Date();
                     var newoptions = {
                         currentPage: data.currentPage,  //当前页数
                         totalPages: data.pages== 0 ? 1 : data.pages,  //总页数
@@ -79,7 +95,9 @@ function buildTable(league,pageNumber,pageSize) {
                     $("#tableBody").empty();//清空表格内容
                     if (dataList.length > 0 ) {
                         $(dataList).each(function(){//重新生成
-                            var date = new Date(Number(this.jointime) * 1000);
+                            var joinDate = new Date(Number(this.jointime) * 1000);
+                            var lastPlayed = new Date(Number(this.lastplayedtime) * 1000);
+                            var updateDate = new Date(Number(this.updatetime) * 1000);
                             $("#tableBody").append('<tr>');
                             $("#tableBody").append('<td>' + this.rank + '</td>');
                             // 组别和层级
@@ -156,13 +174,13 @@ function buildTable(league,pageNumber,pageSize) {
                             else
                                 $("#tableBody").append('<td>' + '</td>');
                             // 种族
-                            if(this.favoriterace == 'TERRAN')
+                            if(this.favoriterace == 'Terran')
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/race_t.png">' + '</td>');
-                            else if (this.favoriterace == 'PROTOSS')
+                            else if (this.favoriterace == 'Protoss')
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/race_p.png">' + '</td>');
-                            else if (this.favoriterace == 'ZERG')
+                            else if (this.favoriterace == 'Zerg')
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/race_z.png">' + '</td>');
-                            else if (this.favoriterace == 'RANDOM')
+                            else if (this.favoriterace == 'Random')
                                 $("#tableBody").append('<td>' + '<img src="' + urlRootContext + '/images/race_r.png">' + '</td>');
                             else
                                 $("#tableBody").append('<td>' + '</td>');
@@ -174,11 +192,14 @@ function buildTable(league,pageNumber,pageSize) {
                                 $("#tableBody").append('<td> <a href="http://www.battlenet.com.cn/sc2/zh' + this.profilepath + '" target="_blank">' +
                                     this.name + '</a> </td>');
 
+                            $("#tableBody").append('<td>' + this.mmr + '</td>');
                             $("#tableBody").append('<td>' + this.points + '</td>');
                             $("#tableBody").append('<td>' + this.wins + '</td>');
                             $("#tableBody").append('<td>' + this.losses + '</td>');
                             $("#tableBody").append('<td>' + this.winrate + '%</td>');
-                            $("#tableBody").append('<td>' + date.toLocaleDateString() + '</td>');
+                            $("#tableBody").append('<td>' + joinDate.toLocaleDateString() + '</td>');
+                            $("#tableBody").append('<td>' + lastPlayed.toLocaleDateString() + '</td>');
+                            $("#tableBody").append('<td>' + dateDiff(now, updateDate) + '</td>');
                             $("#tableBody").append('</tr>');
                         });
                     } else {

@@ -61,7 +61,8 @@
                <!--enableDeleteByExample="false" enableSelectByExample="false"-->
                <!--selectByExampleQueryId="false"></table>-->
         <!--<table schema="general" tableName="user" domainObjectName="User"/>-->
-        <table schema="general" tableName="comment" domainObjectName="Comment"/>
+        <!--<table schema="general" tableName="comment" domainObjectName="Comment"/>-->
+        <table schema="general" tableName="player" domainObjectName="Player"/>
 
     </context>
 </generatorConfiguration>

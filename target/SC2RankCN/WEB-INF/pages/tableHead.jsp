@@ -19,11 +19,14 @@
                     <th>层级</th>
                     <th>种族</th>
                     <th>角色名</th>
+                    <th>MMR</th>
                     <th>分数</th>
                     <th>胜利</th>
                     <th>失败</th>
                     <th>胜率</th>
-                    <th>加入时间</th>
+                    <th>加入</th>
+                    <th>上次游戏</th>
+                    <th>更新</th>
                 </tr>
                 </thead>
                 <tbody id="tableBody">
